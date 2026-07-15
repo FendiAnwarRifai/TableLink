@@ -1,0 +1,22 @@
+# IDE / Editor configurations
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Node / Vue files
+frontend/node_modules/
+frontend/dist/
+frontend/*.local
+
+# Go / Backend files
+backend/*.exe
+backend/*.exe~
+backend/api
+backend/grpc
+backend/.env
+backend/.env.local

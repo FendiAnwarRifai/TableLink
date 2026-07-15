@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package relation;
+
+option go_package = "backend/pb;pb";
+
+service RelationService {
+  rpc AssociateIngredients (AssociateRequest) returns (AssociateResponse);
+  rpc GetIngredientsByItem (GetIngredientsRequest) returns (GetIngredientsResponse);
+  rpc GetItemsByIngredient (GetItemsRequest) returns (GetItemsResponse);
+  rpc RemoveAllAssociationsForItem (RemoveAllRequest) returns (RemoveAllResponse);
+}
+
+message AssociateRequest {
+  string item_uuid = 1;
+  repeated string ingredient_uuids = 2;
+}
+
+message AssociateResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message GetIngredientsRequest {
+  string item_uuid = 1;
+}
+
+message GetIngredientsResponse {
+  repeated string ingredient_uuids = 1;
+}
+
+message GetItemsRequest {
+  string ingredient_uuid = 1;
+}
+
+message GetItemsResponse {
+  repeated string item_uuids = 1;
+}
+
+message RemoveAllRequest {
+  string item_uuid = 1;
+}
+
+message RemoveAllResponse {
+  bool success = 1;
+}
