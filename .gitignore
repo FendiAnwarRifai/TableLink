@@ -16,7 +16,5 @@ frontend/*.local
 # Go / Backend files
 backend/*.exe
 backend/*.exe~
-backend/api
-backend/grpc
 backend/.env
 backend/.env.local

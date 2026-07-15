@@ -4,8 +4,6 @@
 *.dll
 *.so
 *.dylib
-api
-grpc
 
 # Environment variables
 .env
